@@ -1,0 +1,36 @@
+{
+  "name": "eslint-config-deriv",
+  "version": "1.0.0",
+  "description": "Deriv's ESLint config",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shayan-deriv/deriv-configs.git"
+  },
+  "author": "Shayan Khaleghparast",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shayan-deriv/deriv-configs/issues"
+  },
+  "homepage": "https://github.com/shayan-deriv/deriv-configs#readme",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "eslint": ">= 7",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-testing-library": "^4.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.8.0"
+  },
+  "peerDependencies": {
+    "eslint": ">= 7",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-testing-library": "^4.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.8.0"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ]
+}
