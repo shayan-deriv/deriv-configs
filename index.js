@@ -1,4 +1,5 @@
 module.exports = {
+    root: true,
     extends: [
         'airbnb-base',
         'prettier',
@@ -8,6 +9,20 @@ module.exports = {
         'plugin:react-hooks/recommended',
         'plugin:jest-dom/recommended',
     ],
+    plugins : ['prettier', 'testing-library', '@typescript-eslint'],
+    ignorePatterns: ['**/dist/**/*.js', '**/lib/**/*.js'],
+    globals: {
+        dataLayer: true,
+        texts_json: false,
+    },
+    env: {
+        es6: true,
+        browser: true,
+        amd: true,
+        jest: true,
+        jquery: true,
+        jasmine: true,
+    },
     rules: {
         // Restrict
         'comma-dangle': [
