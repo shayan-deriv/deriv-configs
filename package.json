@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-deriv",
-  "version": "1.0.8",
+  "version": "1.0.12",
   "description": "Deriv's ESLint config",
   "main": "index.js",
   "scripts": {

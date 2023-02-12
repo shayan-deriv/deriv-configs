@@ -44,7 +44,43 @@ module.exports = {
       jsx: true,
     },
   },
+
+  settings: {
+    react: {
+      version: '16',
+    },
+    'import/resolver': {
+      typescript: {}, // this loads <rootdir>/tsconfig.json to eslint
+    },
+  },
   rules: {
+
+    //------------------------------------rules from deriv-app------------------------------------
+    camelcase: 0,
+    // semi                                : ['error', 'always'],
+    'array-callback-return': 0,
+    'arrow-body-style': 0,
+    'brace-style': ['error', '1tbs', { allowSingleLine: true }],
+    curly: 0,
+    'eol-last': ['error', 'always'],
+    'func-names': ['error', 'never'],
+    'key-spacing': 0,
+    'max-classes-per-file': ['warn', 2],
+    'lines-between-class-members': 0,
+    indent: 0,
+    'no-console': 'error',
+    'no-else-return': ['error', { allowElseIf: true }],
+    'no-multi-assign': 0,
+    'no-param-reassign': ['error', { props: false }],
+    'no-restricted-globals': 0,
+    'no-script-url': 0,
+    'one-var': ['error', { initialized: 'never', uninitialized: 'always' }],
+    'prefer-destructuring': 0,
+    quotes: 0,
+    'space-infix-ops': 'error',
+    'global-require': 'warn',
+
+    // ------------------------------------rules from binary package------------------------------------
     // Restrict
     'comma-dangle': [
       'error',
@@ -56,8 +92,8 @@ module.exports = {
         functions: 'only-multiline',
       },
     ],
-    indent: ['error', 4, { SwitchCase: 1 }],
-    'key-spacing': ['error', { align: 'colon' }],
+    // indent: ['error', 4, { SwitchCase: 1 }],
+    // 'key-spacing': ['error', { align: 'colon' }],
     'max-len': [
       'error',
       120,
@@ -81,16 +117,16 @@ module.exports = {
     'prefer-template': 'error',
     radix: ['error', 'as-needed'],
     'wrap-iife': ['error', 'inside', { functionPrototypeMethods: true }],
-    'no-nested-ternary': 'error',
-    curly: 'error',
-    quotes: ['error', 'single'],
-    'func-names': ['error', 'as-needed'],
+    // 'no-nested-ternary': 'error',
+    // curly: 'error',
+    // quotes: ['error', 'single'],
+    // 'func-names': ['error', 'as-needed'],
 
     // Warning
     'no-nested-ternary': 'warn',
-    'one-var': 'warn',
+    // 'one-var': 'warn',
     'no-useless-escape': 'warn',
-    'no-console': 'warn',
+    // 'no-console': 'warn',
     'no-underscore-dangle': 'warn',
 
     // Allow
