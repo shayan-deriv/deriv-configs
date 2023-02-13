@@ -133,5 +133,45 @@ module.exports = {
     'no-use-before-define': 'off',
     'no-plusplus': 'off',
     'no-return-assign': 'off',
+
+    // import rules
+    'import/no-extraneous-dependencies': [
+      'warn',
+      {
+        devDependencies: [
+          '**/__tests__/**/*.js',
+          '**/test*.js',
+          '**/*.test.js*',
+          '**/*.spec.js',
+          '**/*.spec.jsx',
+          '**/*.spec.ts',
+          '**/*.test.ts',
+          '**/*.spec.tsx',
+          '**/*.test.tsx',
+        ],
+      },
+    ],
+
+    'import/no-useless-path-segments': 'error',
+    'import/order': [
+      0, // TODO: we should turn this to error after we sorted our import orders.
+      {
+        groups: [['builtin', 'external'], 'internal', 'sibling', 'parent'],
+        'newlines-between': 'ignore',
+      },
+    ],
+    'spaced-comment': 'off',
+    'import/prefer-default-export': 0,
+    'import/extensions': [0, { jsx: 'always', json: 'always' }],
+    'no-sequences': ['warn'],
+    'react/no-unknown-property': 1,
+    'import/no-unresolved': [2, { ignore: ['@deriv/components', '@deriv/shared'] }],
+    'react/prop-types': [
+      1,
+      {
+        skipUndeclared: true,
+      },
+    ],
+    'react/self-closing-comp': 'error',
   },
 };
