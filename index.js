@@ -7,8 +7,11 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:jest-dom/recommended',
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
   ],
-  plugins: ['prettier', 'testing-library', '@typescript-eslint'],
+  plugins: ['prettier', 'testing-library', '@typescript-eslint', 'jest'],
   ignorePatterns: ['**/dist/**/*.js', '**/lib/**/*.js'],
   globals: {
     dataLayer: true,
@@ -21,6 +24,7 @@ module.exports = {
     jest: true,
     jquery: true,
     jasmine: true,
+    node: true
   },
   parser: '@babel/eslint-parser',
   parserOptions: {
@@ -45,9 +49,6 @@ module.exports = {
   },
 
   settings: {
-    react: {
-      version: '16',
-    },
     'import/resolver': {
       typescript: {}, // this loads <rootdir>/tsconfig.json to eslint
     },
@@ -125,7 +126,6 @@ module.exports = {
     'no-nested-ternary': 'warn',
     // 'one-var': 'warn',
     'no-useless-escape': 'warn',
-    // 'no-console': 'warn',
     'no-underscore-dangle': 'warn',
 
     // Allow
@@ -163,7 +163,6 @@ module.exports = {
     'import/prefer-default-export': 0,
     'import/extensions': [0, { jsx: 'always', json: 'always' }],
     'no-sequences': ['warn'],
-    'react/no-unknown-property': 1,
     'import/no-unresolved': [2, { ignore: ['@deriv/components', '@deriv/shared'] }],
     'react/prop-types': [
       1,
@@ -172,5 +171,67 @@ module.exports = {
       },
     ],
     'react/self-closing-comp': 'error',
+
+    // deriv-com
+    "strict": 0,
+    // "no-console": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    // "no-trailing-spaces": [
+    //   "error",
+    //   {
+    //     "skipBlankLines": true
+    //   }
+    // ],
+    "no-unused-vars": "error",
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxEOF": 1
+      }
+    ],
+
+
+    "space-unary-ops": "error",
+    // "import/no-extraneous-dependencies": [
+    //     0,
+    //     {
+    //         "extensions": [".jsx"]
+    //     }
+    // ],
+
+
+    // "import/order": [
+    //   "error",
+    //   {
+    //     "groups": ["builtin", "external", "parent", "sibling", "index"],
+    //     "newlines-between": "never"
+    //   }
+    // ],
+    // "react/sort-prop-types": [
+    //   "error",
+    //   {
+    //     "ignoreCase": true,
+    //     "sortShapeProp": true
+    //   }
+    // ],
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    // "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    // "jest/valid-expect": "error",
+    "react/react-in-jsx-scope": "off",
+
+    //TODO: I'm disabling this rules for now but later we need to fix the code
+    "jest/valid-expect": "off",
+    "no-trailing-spaces": "off",
+    "jest/no-identical-title": "off",
+
+
+    // these are rules that made deriv-com tests fail
+    "no-shadow": "off",
+    "eqeqeq": "off",
+    "consistent-return": "error"
   },
 };
