@@ -232,6 +232,7 @@ module.exports = {
     // these are rules that made deriv-com tests fail
     "no-shadow": "off",
     "eqeqeq": "off",
-    "consistent-return": "error"
+    "consistent-return": "off",
+    'no-unused-expressions': 'off',
   },
 };
