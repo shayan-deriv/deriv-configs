@@ -7,7 +7,6 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:jest-dom/recommended',
-    "eslint:recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
   ],
